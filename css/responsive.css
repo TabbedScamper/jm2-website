@@ -322,8 +322,8 @@
     }
 
     .team-carousel {
-        padding: 200px 50px 50px;
-        min-height: 450px;
+        padding: 50px 50px 100px;
+        min-height: 800px;
     }
 
     .carousel-btn {
@@ -431,8 +431,8 @@
     }
 
     .team-carousel {
-        padding: 180px 20px 50px;
-        min-height: 400px;
+        padding: 50px 20px 100px;
+        min-height: 800px;
     }
 
     .team-member {

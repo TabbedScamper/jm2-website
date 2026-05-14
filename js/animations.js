@@ -79,6 +79,7 @@ function initHeroAnimations() {
         heroTimeline.to(scrollIndicator, {
             opacity: 1,
             y: 0,
+            xPercent: -50,
             duration: 0.6,
             ease: 'power3.out'
         }, '-=0.2');
