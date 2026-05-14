@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "title": "Kelloggs",
+      "category": "engineering",
+      "location": "Memphis, TN",
+      "image": "assets/images/Large-3.jpg"
+    },
+    {
+      "title": "Americold",
+      "category": "engineering",
+      "location": "Carthage, MO",
+      "image": "assets/images/Blu-1.jpg"
+    },
+    {
+      "title": "Williams Sausage",
+      "category": "bim",
+      "location": "Union City, TN",
+      "image": "assets/images/Blu-3.jpg"
+    },
+    {
+      "title": "Federal Courthouse",
+      "category": "engineering",
+      "location": "Jackson, TN",
+      "image": "assets/images/large-1.jpg"
+    },
+    {
+      "title": "Alcoa",
+      "category": "bim",
+      "location": "San Antonio, TX",
+      "image": "assets/images/Blu-2.jpg"
+    },
+    {
+      "title": "McKenzie High School",
+      "category": "engineering",
+      "location": "McKenzie, TN",
+      "image": "assets/images/Large-2.jpg"
+    },
+    {
+      "title": "General Cable",
+      "category": "bim",
+      "location": "Marion, IN",
+      "image": "assets/images/Large-3.jpg"
+    },
+    {
+      "title": "Hino Manufacturing",
+      "category": "engineering",
+      "location": "West Memphis, AR",
+      "image": "assets/images/Blu-1.jpg"
+    },
+    {
+      "title": "Jones Plastic",
+      "category": "scanning",
+      "location": "Camden, TN",
+      "image": "assets/images/Blu-3.jpg"
+    },
+    {
+      "title": "Frederick Manufacturing",
+      "category": "bim",
+      "location": "Marlboro, MD",
+      "image": "assets/images/large-1.jpg"
+    },
+    {
+      "title": "United Stainless",
+      "category": "engineering",
+      "location": "Selmer, TN",
+      "image": "assets/images/Blu-2.jpg"
+    },
+    {
+      "title": "Houston County Schools",
+      "category": "engineering",
+      "location": "Tennessee",
+      "image": "assets/images/Large-2.jpg"
+    }
+  ]
+}

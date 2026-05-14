@@ -1,0 +1,282 @@
+/* ============================================
+   JM2 ENGINEERING - ANIMATIONS
+   GSAP ScrollTrigger enhanced styles
+   ============================================ */
+
+/* --- Animation Initial States --- */
+/* Elements start hidden/transformed, GSAP reveals them */
+
+/* Fade up animation */
+.anim-fade-up {
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+/* Fade in animation */
+.anim-fade-in {
+    opacity: 0;
+}
+
+/* Slide from left */
+.anim-slide-left {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+/* Slide from right */
+.anim-slide-right {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+/* Scale up */
+.anim-scale {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Stagger children - letters/words */
+.anim-stagger-text .char,
+.anim-stagger-text .word {
+    opacity: 0;
+    transform: translateY(30px);
+    display: inline-block;
+}
+
+/* --- Parallax Styles --- */
+.parallax-bg {
+    will-change: transform;
+}
+
+/* --- Hero specific animations --- */
+.hero-logo {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+}
+
+.hero-tagline {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.scroll-indicator {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* --- Service panel animations --- */
+.service-panel {
+    overflow: hidden;
+}
+
+.service-panel .service-skew {
+    opacity: 0;
+}
+
+.service-panel.left .service-skew {
+    transform: skewX(20deg) translateX(-80px);
+}
+
+.service-panel.right .service-skew {
+    transform: skewX(-20deg) translateX(80px);
+}
+
+.service-panel .service-panel-bg {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+/* --- Project card animations --- */
+.project-card {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* --- Team carousel animations --- */
+/* Custom carousel needs to be visible to calculate positions properly */
+.team-carousel {
+    opacity: 1;
+}
+
+/* --- Contact section animations --- */
+.contact-info {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.contact-form-wrapper {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+/* --- Form field focus animations --- */
+.form-group input,
+.form-group textarea {
+    transition: all 0.3s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    transform: scale(1.02);
+}
+
+/* --- Button hover micro-interactions --- */
+.nav-button,
+.filter-btn,
+.submit-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ripple effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* --- Reveal animations when elements come into view --- */
+.is-revealed {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Header scroll animation --- */
+.header {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header.scrolled {
+    background: rgba(10, 10, 15, 0.98);
+}
+
+.header.scrolled .logo {
+    transform: scale(0.85);
+}
+
+.header.scrolled .nav-button {
+    height: 55px;
+    font-size: 0.9rem;
+}
+
+/* --- Smooth scroll snapping (optional) --- */
+/* Uncomment if you want section snapping
+html {
+    scroll-snap-type: y proximity;
+}
+
+.section {
+    scroll-snap-align: start;
+}
+*/
+
+/* --- Prefers reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .anim-fade-up,
+    .anim-fade-in,
+    .anim-slide-left,
+    .anim-slide-right,
+    .anim-scale,
+    .hero-logo,
+    .hero-tagline,
+    .scroll-indicator,
+    .service-panel .service-skew,
+    .service-panel .service-panel-bg,
+    .project-card,
+    .team-member,
+    .contact-info,
+    .contact-form-wrapper {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* --- Loading state --- */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-darker);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-logo {
+    max-width: 200px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.98);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* --- Cursor glow effect (optional enhancement) --- */
+.cursor-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.3;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    display: none;
+}
+
+@media (hover: hover) {
+    .cursor-glow {
+        display: block;
+    }
+}
+
+/* --- Text reveal mask --- */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal-inner {
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.text-reveal.revealed .text-reveal-inner {
+    transform: translateY(0);
+}

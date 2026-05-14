@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JM2 Engineering - Professional mechanical engineering, BIM modeling, and 3D scanning services. 20+ years of experience delivering innovative solutions.">
+    <meta name="keywords" content="mechanical engineering, BIM, 3D scanning, MEP systems, building information modeling">
+    <title>JM2 Engineering | Mechanical Engineering, BIM & 3D Scanning</title>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/Logo.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <img src="assets/images/Upscaled_logo.png" alt="Loading..." class="loading-logo">
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="#hero" class="logo">
+                <img src="assets/images/Trimmed-Logo.png" alt="JM2 Engineering">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li>
+                        <button class="nav-button" data-section="#services">
+                            <span>Services</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-button" data-section="#projects">
+                            <span>Projects</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-button" data-section="#about">
+                            <span>About Us</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-button" data-section="#contact">
+                            <span>Contact</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-overlay"></div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+            <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+            <li><a href="#services" class="mobile-nav-link">Services</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="hero-background">
+                <div class="hero-background-left" style="background-image: url('assets/images/large-3.jpg');"></div>
+                <div class="hero-background-right" style="background-image: url('assets/images/Blu-1.jpg');"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-gradient"></div>
+            <div class="hero-particles"></div>
+
+            <div class="hero-content">
+                <img src="assets/images/Upscaled_logo.png" alt="JM2 Engineering" class="hero-logo">
+                <h2 class="hero-tagline">A Better Design</h2>
+                <p class="hero-description">Here at JM2, a "better design" means a design with all invested parties in mind, from the owner down to the installing contractor. We think about everything it takes to get from point A to point B and relay that information in the best design possible.</p>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-indicator-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container">
+                <div class="services-header">
+                    <h2>Our Services</h2>
+                    <p>Full-Service MEP Engineering, BIM Modeling & 3D Scanning</p>
+                </div>
+            </div>
+
+            <!-- Engineering Panel -->
+            <div class="service-panel left" data-service="engineering">
+                <div class="service-panel-bg" style="background-image: url('assets/images/large-1.jpg');"></div>
+                <div class="service-panel-content">
+                    <div class="service-skew">
+                        <div class="service-inner">
+                            <h3>Engineering</h3>
+                            <p>20+ years designing mechanical and electrical systems for industrial, commercial, and institutional facilities.</p>
+                            <span class="service-explore">Click to Explore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BIM Panel -->
+            <div class="service-panel right" data-service="bim">
+                <div class="service-panel-bg" style="background-image: url('assets/images/Large-3.jpg');"></div>
+                <div class="service-panel-content">
+                    <div class="service-skew">
+                        <div class="service-inner">
+                            <h3>BIM Modeling</h3>
+                            <p>8+ years modeling MEP systems for coordination, prefabrication, and real-world accuracy.</p>
+                            <span class="service-explore">Click to Explore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3D Scanning Panel -->
+            <div class="service-panel left" data-service="scanning">
+                <div class="service-panel-bg" style="background-image: url('assets/images/Blu-2.jpg');"></div>
+                <div class="service-panel-content">
+                    <div class="service-skew">
+                        <div class="service-inner">
+                            <h3>3D Scanning</h3>
+                            <p>Laser scanning technology for precise as-built documentation and virtual walkthroughs.</p>
+                            <span class="service-explore">Click to Explore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="projects-header">
+                    <h2>Our Projects</h2>
+                    <p>Delivering excellence across Tennessee and beyond since 2016</p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="projects-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <span>All Projects</span>
+                    </button>
+                    <button class="filter-btn" data-filter="engineering">
+                        <span>Engineering</span>
+                    </button>
+                    <button class="filter-btn" data-filter="bim">
+                        <span>BIM</span>
+                    </button>
+                    <button class="filter-btn" data-filter="scanning">
+                        <span>3D Scanning</span>
+                    </button>
+                </div>
+
+                <!-- Projects Grid - Loaded dynamically from data/projects.json -->
+                <div class="projects-grid">
+                    <!-- Projects are loaded automatically from data/projects.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Team Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="about-header">
+                    <h2>About Us</h2>
+                    <p>Meet the experts behind JM2 Engineering</p>
+                </div>
+
+                <div class="about-intro">
+                    <p>JM2 Associates brings together highly experienced and skilled professionals. Founded in 2016, our owners Brian Dougan and David Walton bring a combined 35 years experience in the design of mechanical systems. With contracting backgrounds, they pride themselves in knowing the level of detail necessary for great end results.</p>
+                </div>
+            </div>
+
+            <!-- Team Carousel -->
+            <div class="carousel-wrapper">
+                <div class="team-carousel">
+                    <div class="team-member">
+                        <img src="assets/images/Brian Dougan.png" alt="Brian Dougan, PE" class="team-member-image">
+                        <h3 class="team-member-name">Brian Dougan, PE</h3>
+                        <p class="team-member-title">Co-Founder & Principal Engineer</p>
+                        <p class="team-member-bio">Licensed professional engineer operating in multiple states. Previously served as Vice President of Engineering for a large mechanical contractor and corporate Director of Engineering for a national food processor. LEED AP certified, Brian emphasizes building client trust through repeat business and delivering solutions that meet demanding circumstances and budgets.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/David Walton.png" alt="David Walton" class="team-member-image">
+                        <h3 class="team-member-name">David Walton</h3>
+                        <p class="team-member-title">Co-Founder & BIM Director</p>
+                        <p class="team-member-bio">Highly experienced BIM designer and coordinator, recognized as an industry leader in 3D modeling and detailing applications. Previously employed by two large mechanical contractors where he founded and led the Virtual Construction Team, handling modeling, coordination, and detailing systems to fabrication level. LEED AP certified.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/Michael McCormick.png" alt="Michael McCormick, PE" class="team-member-image">
+                        <h3 class="team-member-name">Michael McCormick, PE</h3>
+                        <p class="team-member-title">Electrical Engineer</p>
+                        <p class="team-member-bio">Michael brings over 20 years of electrical engineering expertise to JM2, with a focus on commercial and industrial design. A licensed Professional Engineer since 2007 and LEED Accredited Professional, he previously served as Director of Electrical Engineering for nearly two decades. Michael holds a B.E. in Electrical Engineering from Tennessee Tech.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/Tanner Cagle.png" alt="Tanner Cagle, PE" class="team-member-image">
+                        <h3 class="team-member-name">Tanner Cagle, PE</h3>
+                        <p class="team-member-title">Mechanical Engineer</p>
+                        <p class="team-member-bio">Tanner combines over 13 years of hands-on field experience as an HVAC technician, plumber, electrician, and sheet metal worker with formal engineering training. A licensed Professional Engineer with a B.S. in Mechanical Engineering from UT Martin, his unique background bridges the gap between design and installation.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/Todd Jones.png" alt="Todd Jones, PE" class="team-member-image">
+                        <h3 class="team-member-name">Todd Jones, PE</h3>
+                        <p class="team-member-title">Mechanical Engineer</p>
+                        <p class="team-member-bio">Todd brings 8+ years of mechanical engineering experience, with expertise in mechanical systems design. A licensed Professional Engineer, he delivers practical, well-coordinated solutions for complex projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-header">
+                    <h2>Get In Touch</h2>
+                    <p>Ready to start your next project? Contact us today.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <ul class="contact-details">
+                            <li>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <div>
+                                    <strong>Address</strong><br>
+                                    98 N Star Dr. #D<br>
+                                    Jackson, TN 38305
+                                </div>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                                <div>
+                                    <strong>Phone</strong><br>
+                                    <a href="tel:+17317364441">(731) 736-4441</a>
+                                </div>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    <a href="mailto:bdougan@jm2eng.com">bdougan@jm2eng.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <!--
+                        FORMSPREE SETUP:
+                        1. Create a free account at formspree.io
+                        2. Create a new form and copy your form ID
+                        3. Replace {your-form-id} below with your actual form ID
+                        4. Add data-ajax="true" to enable AJAX submission
+                        -->
+                        <form class="contact-form" action="https://formspree.io/f/{your-form-id}" method="POST" data-ajax="true">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+
+                            <!-- Honeypot for spam prevention -->
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="spinner"></span>
+                            </button>
+
+                            <div class="form-feedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Service Detail Back Button (outside overlay for proper fixed positioning) -->
+    <button class="service-detail-back" id="serviceDetailBack">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+        Back
+    </button>
+
+    <!-- Service Detail Overlay (outside main for proper animation) -->
+    <div class="service-detail-overlay" id="serviceDetailOverlay">
+        <div class="service-detail-content" id="serviceDetailContent">
+            <!-- Content loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/Upscaled_logo.png" alt="JM2 Engineering">
+                    <p>Based in Jackson, Tennessee, JM2 Engineering delivers 20+ years of mechanical systems expertise. Specializing in HVAC, plumbing, fire protection, and industrial process piping for food processing, clean rooms, and medical facilities.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.737-.9 10.126-5.864 10.126-11.854z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 JM2 Engineering. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+    <!-- Custom Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/service-detail.js"></script>
+</body>
+</html>

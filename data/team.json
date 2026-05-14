@@ -1,0 +1,38 @@
+{
+  "members": [
+    {
+      "name": "Brian Dougan, PE",
+      "title": "Co-Founder & Principal Engineer",
+      "bio": "Licensed professional engineer operating in multiple states. Previously served as Vice President of Engineering for a large mechanical contractor and corporate Director of Engineering for a national food processor. LEED AP certified, Brian emphasizes building client trust through repeat business and delivering solutions that meet demanding circumstances and budgets.",
+      "image": "assets/images/Brian Dougan.png",
+      "email": "bdougan@jm2eng.com",
+      "phone": "731-431-1293"
+    },
+    {
+      "name": "David Walton",
+      "title": "Co-Founder & BIM Director",
+      "bio": "Highly experienced BIM designer and coordinator, recognized as an industry leader in 3D modeling and detailing applications. Previously employed by two large mechanical contractors where he founded and led the Virtual Construction Team, handling modeling, coordination, and detailing systems to fabrication level. LEED AP certified.",
+      "image": "assets/images/David Walton.png",
+      "email": "dwalton@jm2eng.com",
+      "phone": "731-487-2881"
+    },
+    {
+      "name": "Michael McCormick, PE",
+      "title": "Electrical Engineer",
+      "bio": "Michael brings over 20 years of electrical engineering expertise to JM2, with a focus on commercial and industrial design. A licensed Professional Engineer since 2007 and LEED Accredited Professional, he previously served as Director of Electrical Engineering for nearly two decades. Michael holds a B.E. in Electrical Engineering from Tennessee Tech.",
+      "image": "assets/images/Michael McCormick.png"
+    },
+    {
+      "name": "Tanner Cagle, PE",
+      "title": "Mechanical Engineer",
+      "bio": "Tanner combines over 13 years of hands-on field experience as an HVAC technician, plumber, electrician, and sheet metal worker with formal engineering training. A licensed Professional Engineer with a B.S. in Mechanical Engineering from UT Martin, his unique background bridges the gap between design and installation.",
+      "image": "assets/images/Tanner Cagle.png"
+    },
+    {
+      "name": "Todd Jones, PE",
+      "title": "Mechanical Engineer",
+      "bio": "Todd brings 8+ years of mechanical engineering experience, with expertise in mechanical systems design. A licensed Professional Engineer, he delivers practical, well-coordinated solutions for complex projects.",
+      "image": "assets/images/Todd Jones.png"
+    }
+  ]
+}

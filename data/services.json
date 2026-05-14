@@ -1,0 +1,120 @@
+{
+  "services": {
+    "engineering": {
+      "title": "Engineering Services",
+      "subtitle": "20+ Years of Mechanical & Electrical Design Excellence",
+      "intro": "JM2 Associates brings two decades of experience designing mechanical and electrical systems for industrial, distribution, institutional, educational, medical, food processing, and commercial facilities.",
+      "image": "assets/images/large-1.jpg",
+      "capabilities": [
+        {
+          "title": "HVAC Systems",
+          "description": "Central equipment design, ductwork and piping layouts featuring humidity control, pressurization, refrigeration, and energy-efficient solutions.",
+          "icon": "hvac"
+        },
+        {
+          "title": "Plumbing Systems",
+          "description": "Complete sizing and detailing, including specialized services like process waste and syphonic roof drainage.",
+          "icon": "plumbing"
+        },
+        {
+          "title": "Electrical Systems",
+          "description": "Power distribution, lighting design, motor controls, and low voltage systems for commercial and industrial facilities.",
+          "icon": "power"
+        },
+        {
+          "title": "Industrial & Process",
+          "description": "Process piping design from conceptual to fabrication-level drawings, plus ventilation, dust collection, and compressed air systems.",
+          "icon": "industrial"
+        },
+        {
+          "title": "Fire Protection",
+          "description": "Sprinkler system sizing, selection, and layout plus fire alarm integration for comprehensive building protection.",
+          "icon": "fire"
+        },
+        {
+          "title": "Energy & LEED",
+          "description": "Energy-efficient retrofits and new construction solutions with LEED certification expertise.",
+          "icon": "energy"
+        }
+      ],
+      "additionalServices": [
+        "Project Management & Oversight",
+        "Contractor Qualification & Bid Review",
+        "Arc Flash & Electrical Safety Studies",
+        "New Construction Commissioning",
+        "Retro-Commissioning Services",
+        "Test and Balance Verification"
+      ]
+    },
+    "bim": {
+      "title": "BIM Modeling",
+      "subtitle": "Building Information Modeling for the Modern Age",
+      "intro": "JM2 has 8+ years of expertise modeling MEP systems for coordination and prefabrication, serving as both lead coordinators and team participants on major projects.",
+      "image": "assets/images/Large-3.jpg",
+      "capabilities": [
+        {
+          "title": "MEP Coordination",
+          "description": "Full 3D coordination of mechanical, electrical, and plumbing systems to identify and resolve conflicts before construction.",
+          "icon": "coordination"
+        },
+        {
+          "title": "Prefabrication Support",
+          "description": "Detailed models enabling off-site fabrication of MEP components, reducing field labor and improving quality.",
+          "icon": "prefab"
+        },
+        {
+          "title": "Energy Analysis",
+          "description": "Building loads analysis, energy calculations, and lifetime cost evaluation for informed decision making.",
+          "icon": "energy"
+        },
+        {
+          "title": "Project Scheduling",
+          "description": "4D BIM integration linking 3D models with construction schedules for visual project planning.",
+          "icon": "schedule"
+        }
+      ],
+      "software": [
+        "Autodesk Revit with Fabrication Add-ons",
+        "Navisworks for Clash Detection",
+        "Building Load Calculation Tools",
+        "MEP System Efficiency Analysis"
+      ],
+      "approach": "We emphasize detail and installation feasibility, utilizing advanced software to create models that closely match real-world conditions for seamless installation."
+    },
+    "scanning": {
+      "title": "3D Point Cloud Scanning",
+      "subtitle": "Precision As-Built Documentation",
+      "intro": "Laser scanning technology that rotates 360 degrees to collect 3D location data, creating near-perfect as-built documentation of existing conditions.",
+      "image": "assets/images/Blu-2.jpg",
+      "capabilities": [
+        {
+          "title": "As-Built Documentation",
+          "description": "Capture existing conditions with millimeter accuracy for renovation and retrofit projects.",
+          "icon": "documentation"
+        },
+        {
+          "title": "Virtual Walkthroughs",
+          "description": "Eliminate reliance on photographs and field measurements with immersive 3D environment exploration.",
+          "icon": "walkthrough"
+        },
+        {
+          "title": "Coordination & Sharing",
+          "description": "Share accurate existing conditions with all project stakeholders through integrated BIM workflows.",
+          "icon": "sharing"
+        },
+        {
+          "title": "Prefabrication Planning",
+          "description": "Enable accurate MEP prefabrication by knowing exact field conditions before manufacturing.",
+          "icon": "planning"
+        }
+      ],
+      "benefits": [
+        "Reduces rework costs significantly",
+        "Improves field safety through planning",
+        "Eliminates weeks of rough-in activities",
+        "Enables advanced prefabrication coordination",
+        "Creates permanent digital record of facilities"
+      ]
+    }
+  }
+}
