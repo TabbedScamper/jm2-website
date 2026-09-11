@@ -1,0 +1,54 @@
+# JM2 Engineering - Apache config for IONOS Web Hosting.
+# (GitHub Pages ignores this file.)
+
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# One canonical host. The old MyWebsite site was indexed on www, so keep that.
+# Scoped to the bare domain only, so preview subdomains are left alone.
+# HTTPS itself is forced by the IONOS SSL setting, not here (avoids a
+# redirect loop if the Cloudflare CDN terminates TLS).
+RewriteCond %{HTTP_HOST} ^jm2eng\.com$ [NC]
+RewriteRule ^(.*)$ https://www.jm2eng.com/$1 [R=301,L]
+
+# Old MyWebsite pages -> matching sections of the one-page site, so existing
+# Google results and bookmarks still land somewhere sensible.
+# NE keeps the # from being escaped.
+RewriteRule ^engineering/?$                /#services [R=301,NE,L]
+RewriteRule ^bim-and-3d-scanning/?$        /#services [R=301,NE,L]
+RewriteRule ^projects/?$                   /#projects [R=301,NE,L]
+RewriteRule ^about-us/?$                   /#about    [R=301,NE,L]
+RewriteRule ^contact-us(/directions)?/?$   /#contact  [R=301,NE,L]
+RewriteRule ^new-home-page/?$              /          [R=301,L]
+
+# Never serve dotfiles, notes, logs or secrets.
+<FilesMatch "(^\.|\.(md|log|key|bak|ini|sh)$)">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_mime.c>
+    AddType font/woff2 .woff2
+    AddType font/ttf   .ttf
+    AddType application/json .json
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml font/ttf
+</IfModule>
+
+# No cache-busting query strings on this site, so CSS/JS stay short-lived
+# (edits show within the hour); images and fonts rarely change.
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault                      "access plus 1 hour"
+    ExpiresByType text/html             "access plus 10 minutes"
+    ExpiresByType text/css              "access plus 1 hour"
+    ExpiresByType application/javascript "access plus 1 hour"
+    ExpiresByType application/json      "access plus 1 hour"
+    ExpiresByType image/jpeg            "access plus 30 days"
+    ExpiresByType image/png             "access plus 30 days"
+    ExpiresByType font/woff2            "access plus 30 days"
+    ExpiresByType font/ttf              "access plus 30 days"
+</IfModule>
