@@ -7,9 +7,12 @@
  * uses PHP mail() through IONOS's own relay. No third-party service, no key.
  *
  * DELIVERABILITY NOTE: jm2eng.com's SPF record includes _spf-us.ionos.com and
- * _spf.perfora.net, which authorise IONOS's outbound relays. The From address
- * and the envelope sender (-f) MUST stay on @jm2eng.com for that to pass.
- * The visitor's address goes in Reply-To, never in From.
+ * _spf.perfora.net, which authorise IONOS's outbound relays. Keep From on
+ * @jm2eng.com; the visitor's address goes in Reply-To, never in From.
+ *
+ * Do NOT pass mail()'s 5th argument ('-f' envelope sender). IONOS's sendmail
+ * wrapper rejects it outright - mail() returns false for any -f, even a real
+ * mailbox (verified 2026-09-11). Without it IONOS sets the envelope itself.
  */
 
 declare(strict_types=1);
@@ -116,8 +119,7 @@ $sent = mail(
     implode(', ', MAIL_TO),
     mb_encode_mimeheader('[Website] ' . $subject, 'UTF-8'),
     $body,
-    $headers,
-    '-f' . MAIL_FROM   // envelope sender on our domain, so SPF passes
+    $headers
 );
 
 if (!$sent) {
