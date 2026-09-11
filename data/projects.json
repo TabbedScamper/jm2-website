@@ -4,73 +4,73 @@
       "title": "Kelloggs",
       "category": "engineering",
       "location": "Memphis, TN",
-      "image": "assets/images/Large-3.jpg"
+      "image": "assets/images/thumbs/Large-3.webp"
     },
     {
       "title": "Americold",
       "category": "engineering",
       "location": "Carthage, MO",
-      "image": "assets/images/Blu-1.jpg"
+      "image": "assets/images/thumbs/Blu-1.webp"
     },
     {
       "title": "Williams Sausage",
       "category": "bim",
       "location": "Union City, TN",
-      "image": "assets/images/Blu-3.jpg"
+      "image": "assets/images/thumbs/Blu-3.webp"
     },
     {
       "title": "Federal Courthouse",
       "category": "engineering",
       "location": "Jackson, TN",
-      "image": "assets/images/large-1.jpg"
+      "image": "assets/images/thumbs/large-1.webp"
     },
     {
       "title": "Alcoa",
       "category": "bim",
       "location": "San Antonio, TX",
-      "image": "assets/images/Blu-2.jpg"
+      "image": "assets/images/thumbs/Blu-2.webp"
     },
     {
       "title": "McKenzie High School",
       "category": "engineering",
       "location": "McKenzie, TN",
-      "image": "assets/images/Large-2.jpg"
+      "image": "assets/images/thumbs/Large-2.webp"
     },
     {
       "title": "General Cable",
       "category": "bim",
       "location": "Marion, IN",
-      "image": "assets/images/Large-3.jpg"
+      "image": "assets/images/thumbs/Large-3.webp"
     },
     {
       "title": "Hino Manufacturing",
       "category": "engineering",
       "location": "West Memphis, AR",
-      "image": "assets/images/Blu-1.jpg"
+      "image": "assets/images/thumbs/Blu-1.webp"
     },
     {
       "title": "Jones Plastic",
       "category": "scanning",
       "location": "Camden, TN",
-      "image": "assets/images/Blu-3.jpg"
+      "image": "assets/images/thumbs/Blu-3.webp"
     },
     {
       "title": "Frederick Manufacturing",
       "category": "bim",
       "location": "Marlboro, MD",
-      "image": "assets/images/large-1.jpg"
+      "image": "assets/images/thumbs/large-1.webp"
     },
     {
       "title": "United Stainless",
       "category": "engineering",
       "location": "Selmer, TN",
-      "image": "assets/images/Blu-2.jpg"
+      "image": "assets/images/thumbs/Blu-2.webp"
     },
     {
       "title": "Houston County Schools",
       "category": "engineering",
       "location": "Tennessee",
-      "image": "assets/images/Large-2.jpg"
+      "image": "assets/images/thumbs/Large-2.webp"
     }
   ]
 }
