@@ -285,14 +285,9 @@
 
                     <!-- Contact Form -->
                     <div class="contact-form-wrapper">
-                        <!--
-                        FORMSPREE SETUP:
-                        1. Create a free account at formspree.io
-                        2. Create a new form and copy your form ID
-                        3. Replace {your-form-id} below with your actual form ID
-                        4. Add data-ajax="true" to enable AJAX submission
-                        -->
-                        <form class="contact-form" action="https://formspree.io/f/{your-form-id}" method="POST" data-ajax="true">
+                        <!-- Posts to contact.php on the IONOS hosting, which emails the
+                             inquiry via IONOS mail. Recipients are set at the top of that file. -->
+                        <form class="contact-form" action="contact.php" method="POST" data-ajax="true">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" placeholder="John Doe" required>

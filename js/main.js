@@ -63,7 +63,7 @@ async function loadProjects() {
             article.dataset.category = project.category;
 
             article.innerHTML = `
-                <img src="${project.image}" alt="${project.title}" class="project-card-image">
+                <img src="${project.image}" alt="${project.title}" class="project-card-image" loading="lazy" decoding="async">
                 <div class="project-card-overlay">
                     <span class="project-card-tag">${categoryLabels[project.category] || project.category}</span>
                     <h3 class="project-card-title">${project.title}</h3>
@@ -368,10 +368,7 @@ function initContactForm() {
             feedback.style.display = 'none';
         }
 
-        // For Formspree, let the form submit naturally
-        // But we'll handle the response with fetch for better UX
-
-        // If using Formspree with AJAX:
+        // Submit to contact.php with fetch so the visitor stays on the page
         if (form.dataset.ajax === 'true') {
             e.preventDefault();
 
@@ -385,10 +382,12 @@ function initContactForm() {
                 }
             })
             .then(function(response) {
-                if (response.ok) {
-                    return response.json();
-                }
-                throw new Error('Network response was not ok');
+                // contact.php answers JSON either way; surface its message
+                // (e.g. a missing field or the rate limit) when it refuses.
+                return response.json().catch(function() { return {}; }).then(function(data) {
+                    if (response.ok && data.ok !== false) return data;
+                    throw new Error(data.error || 'Network response was not ok');
+                });
             })
             .then(function() {
                 // Success
@@ -399,10 +398,12 @@ function initContactForm() {
                 }
                 form.reset();
             })
-            .catch(function() {
+            .catch(function(err) {
                 // Error
                 if (feedback) {
-                    feedback.textContent = 'Oops! Something went wrong. Please try again.';
+                    feedback.textContent = (err && err.message && err.message !== 'Network response was not ok')
+                        ? err.message
+                        : 'Oops! Something went wrong. Please call us at (731) 736-4441.';
                     feedback.classList.add('error');
                     feedback.style.display = 'block';
                 }
