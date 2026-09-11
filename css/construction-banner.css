@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Under Construction banner
+   Fixed to the bottom of the viewport. Hazard stripes scroll left to right,
+   a black plate holds the text, and a highlight sweeps across the lettering
+   roughly every 10 seconds.
+
+   To remove the banner later: delete the .uc-banner block from index.html and
+   the <link> to this file. Everything it touches is scoped in here, including
+   the body padding and the hero scroll-indicator offset below.
+   ========================================================================== */
+
+/* Subset of BF_MONO Book - only the glyphs in "UNDER CONSTRUCTION". */
+@font-face {
+    font-family: 'BF Mono UC';
+    src: url('../assets/fonts/bf-mono-uc.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+:root {
+    --uc-h: 50px;            /* banner height - everything below keys off this */
+    --uc-orange: #ff8a00;
+    --uc-black: #000;
+    --uc-red: #ff1a1a;
+    --uc-tile: 70px;         /* one full orange+black stripe cycle */
+}
+
+.uc-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--uc-h);
+    /* Above all page content, below the mobile menu (999/1000), the service
+       overlay (10000) and the loading screen, which should all cover it. */
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;    /* never steals clicks from the page */
+    background: var(--uc-black);
+}
+
+/* ---- hazard stripes ---------------------------------------------------- */
+.uc-stripes {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        135deg,
+        var(--uc-orange) 0,
+        var(--uc-orange) calc(var(--uc-tile) * 0.3536),
+        var(--uc-black) calc(var(--uc-tile) * 0.3536),
+        var(--uc-black) calc(var(--uc-tile) * 0.7071)
+    );
+    /* A 135deg stripe repeats horizontally every tile/cos(45deg), so sizing the
+       tile to exactly that and sliding it one tile width loops seamlessly. */
+    background-size: var(--uc-tile) var(--uc-tile);
+    animation: uc-stripes 2.4s linear infinite;
+    will-change: background-position;
+}
+
+@keyframes uc-stripes {
+    from { background-position: 0 0; }
+    to   { background-position: var(--uc-tile) 0; }
+}
+
+/* ---- black plate + lettering ------------------------------------------ */
+.uc-plate {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0.55em;
+    background: var(--uc-black);
+    font-family: 'BF Mono UC', 'Consolas', 'Courier New', monospace;
+    /* Height-driven on wide screens, width-driven on narrow ones so the
+       18 characters always fit with stripes showing either side. */
+    font-size: min(calc(var(--uc-h) * 0.9), 5vw);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.uc-text {
+    position: relative;
+    display: block;
+    color: var(--uc-red);
+    letter-spacing: 0.08em;
+    /* neon glow, as in the mockup */
+    text-shadow:
+        0 0 2px var(--uc-red),
+        0 0 8px rgba(255, 26, 26, 0.65),
+        0 0 16px rgba(255, 0, 0, 0.35);
+}
+
+/* The shimmer is a duplicate of the text, clipped to a moving highlight.
+   It is aria-hidden in the markup so screen readers read the words once. */
+.uc-shine {
+    position: absolute;
+    inset: 0;
+    color: transparent;
+    letter-spacing: inherit;
+    text-shadow: none;
+    background-image: linear-gradient(
+        100deg,
+        transparent 42%,
+        rgba(255, 255, 255, 0.95) 50%,
+        transparent 58%
+    );
+    background-size: 250% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: uc-shimmer 10s ease-in-out infinite;
+    animation-delay: 2s;     /* first sweep shortly after the page settles */
+}
+
+/* 100% -> 0% moves the highlight from off the left edge to off the right.
+   The sweep takes the first ~1.4s of each 10s cycle, then rests. */
+@keyframes uc-shimmer {
+    0%        { background-position: 100% 0; }
+    14%, 100% { background-position: 0% 0; }
+}
+
+/* ---- keep page content clear of the banner ----------------------------- */
+body {
+    padding-bottom: var(--uc-h);
+}
+
+/* The hero is 100vh and its scroll indicator sits near the bottom edge, which
+   the banner now covers - lift it by the banner height. */
+.scroll-indicator {
+    bottom: calc(40px + var(--uc-h));
+}
+
+@media (max-width: 768px) {
+    :root {
+        --uc-h: 38px;
+        --uc-tile: 52px;
+    }
+
+    .scroll-indicator {
+        bottom: calc(20px + var(--uc-h));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .uc-stripes,
+    .uc-shine {
+        animation: none;
+    }
+}
