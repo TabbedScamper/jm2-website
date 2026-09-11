@@ -285,9 +285,12 @@
 
                     <!-- Contact Form -->
                     <div class="contact-form-wrapper">
-                        <!-- Posts to contact.php on the IONOS hosting, which emails the
-                             inquiry via IONOS mail. Recipients are set at the top of that file. -->
-                        <form class="contact-form" action="contact.php" method="POST" data-ajax="true">
+                        <!-- The site is static (GitHub Pages), so the form posts to Web3Forms, which
+                             emails each inquiry to the address the access key was issued for. The key
+                             is public by design; it only lets this form send to that inbox. -->
+                        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-ajax="true">
+                            <input type="hidden" name="access_key" value="37ccb6a6-6cac-46ab-8569-eb255b05249b">
+                            <input type="hidden" name="from_name" value="JM2 Website">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -313,8 +316,8 @@
                                 <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
                             </div>
 
-                            <!-- Honeypot for spam prevention -->
-                            <input type="text" name="_gotcha" style="display:none">
+                            <!-- Honeypot for spam prevention (Web3Forms drops submissions that tick it) -->
+                            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
                             <button type="submit" class="submit-btn">
                                 <span class="btn-text">Send Message</span>

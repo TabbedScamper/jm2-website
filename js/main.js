@@ -368,7 +368,7 @@ function initContactForm() {
             feedback.style.display = 'none';
         }
 
-        // Submit to contact.php with fetch so the visitor stays on the page
+        // Submit to Web3Forms with fetch so the visitor stays on the page
         if (form.dataset.ajax === 'true') {
             e.preventDefault();
 
@@ -382,11 +382,13 @@ function initContactForm() {
                 }
             })
             .then(function(response) {
-                // contact.php answers JSON either way; surface its message
-                // (e.g. a missing field or the rate limit) when it refuses.
+                // Web3Forms answers JSON { success, message } either way;
+                // surface its message when it refuses a submission.
                 return response.json().catch(function() { return {}; }).then(function(data) {
-                    if (response.ok && data.ok !== false) return data;
-                    throw new Error(data.error || 'Network response was not ok');
+                    if (response.ok && data.success !== false) return data;
+                    var err = new Error('refused');
+                    err.serverMessage = data.message;
+                    throw err;
                 });
             })
             .then(function() {
@@ -401,8 +403,10 @@ function initContactForm() {
             .catch(function(err) {
                 // Error
                 if (feedback) {
-                    feedback.textContent = (err && err.message && err.message !== 'Network response was not ok')
-                        ? err.message
+                    // Only show text that came from the form service; a network
+                    // failure ("Failed to fetch") gets the phone-number fallback.
+                    feedback.textContent = (err && err.serverMessage)
+                        ? err.serverMessage
                         : 'Oops! Something went wrong. Please call us at (731) 736-4441.';
                     feedback.classList.add('error');
                     feedback.style.display = 'block';
